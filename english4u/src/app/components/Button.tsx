@@ -7,8 +7,11 @@ type ButtonProps = {
     onClick?: () => void;
 };
 
-export default function ButtonDefault({ name, type, className, onClick }: ButtonProps) {
+const ButtonDefault = ({ name, type, className, onClick }: ButtonProps) => {
     return (
         <button type={type} className={className} onClick={onClick} >{name}</button>
     );
 }
+
+
+export default ButtonDefault;

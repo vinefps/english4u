@@ -12,8 +12,8 @@ export default function Menu() {
     }
 
     return (
-        <nav className="flex flex-row fixed z-10 bg-green-400 w-screen">
-            <div className="flex justify-between w-full h-32 relative ">
+        <nav className="flex flex-row fixed z-20 bg-[#004AAD] w-screen">
+            <div className="flex justify-around w-full h-24 relative">
                 <div className="flex items-center ">
                     <Image
                         className="bg-white rounded-full ml-8 lg:ml-24"
@@ -25,18 +25,18 @@ export default function Menu() {
                     />
                 </div>
                 <div className="w-full lg:hidden">
-                    <div className="flex justify-end items-center h-32" onClick={showMenu}>
+                    <div className="flex justify-end items-center h-24" onClick={showMenu}>
                         <Image
-                            className="cursor-pointer mr-8 h-20"
-                            width={70}
-                            height={25}
+                            className="cursor-pointer mr-8"
+                            width={40}
+                            height={35}
                             src="/menu.svg"
                             alt="Menu"
                             priority
                         />
                     </div>
                 </div>
-                <div className={`w-full absolute top-32 bg-green-800 ${menubar ? 'block' : 'hidden'} lg:max-xl:w-2/3 2xl:3/4 lg:block lg:static lg:max-xl:bg-green-400 2xl:bg-green-800`}>
+                <div className={`w-full absolute top-24  bg-[#004AAD] ${menubar ? 'block' : 'hidden'} lg:max-xl:w-2/3 2xl:3/4 lg:block lg:static lg:max-xl:bg-[#004AAD] xl:w-1/2`}>
                     <ul className="gap-x-4 lg:flex lg:items-center lg:h-full">
                         <li className='p-8 lg:p-0 '>
                             <a href="#" className="text-white text-xl hover:text-gray-100 px-3 py-2 rounded-md text-lg lg:text-base">Diferenciais</a>
@@ -54,9 +54,9 @@ export default function Menu() {
                             <a href="#" className="text-white text-xl hover:text-gray-100 px-3 py-2 rounded-md text-lg lg:text-base">FAQ</a>
                         </li>
                         <li className='p-8 lg:p-2'>
-                            <ButtonDefault name='ACESSAR' className='bg-green-400 text-white text-xl w-3/4 h-20 rounded-full lg:w-28 lg:h-12 lg:bg-green-800' />
+                            <ButtonDefault name='ACESSAR' className='bg-[#F6281B] hover:bg-[#004AAD] text-white text-xl w-3/4 h-20 rounded-full lg:w-28 lg:h-12 lg:bg-[#F6281B]' />
                         </li>
-                        <div className='w-full h-2 bg-green-400 lg:hidden'></div>
+                        <div className='w-full h-2 bg-[#004AAD] lg:hidden'></div>
                     </ul>
                 </div>
             </div>

@@ -3,193 +3,180 @@ import { useState } from "react";
 import Image from "next/image";
 import Content from '../components/Content'
 import Menu from '../components/Menu';
-import Footer from '../components/Footer'
+import Button from '../components/Button';
+import Footer from '../components/Footer';
 import React from "react";
+import TestimonialCarousel from '../components/Carrosel'
 
 export default function Home() {
-
+   const testimonials = [
+    {
+      content:
+        'exercícios práticos e objetivos. O inglês da Wise Up Online está permitindo me projetar e concorrer no mercado de trabalho internacional.',
+      author: 'Vinicius',
+    },{
+      content: 'exercícios práticos e objetivos. O inglês da Wise Up Online está permitindo me projetar e concorrer no mercado de trabalho internacional',
+      author:"Lucas Silva"
+    },{
+      content: 'exercícios práticos e objetivos. O inglês da Wise Up Online está permitindo me projetar e concorrer no mercado de trabalho internacional',
+      author:"Robert"
+    },{
+      content: 'exercícios práticos e objetivos. O inglês da Wise Up Online está permitindo me projetar e concorrer no mercado de trabalho internacional',
+      author:"Augusto"
+    }
+    
+  ];
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between w-screen">
-      <div className="flex justify-center w-full sm:w-auto">
+    <main className="flex flex-col lg:items-center lg:justify-between w-screen">
         <Menu />
-      </div>
-      {/* <section className="pt-32">
-        <div className="flex place-items-center w-[1150px]">
-          <div className="flex-1">
-            <div className="">
-              <div className="h-60 w-72">
-                <div className="sm:text-xs lg:text-4xl line-clamp-3">Unlock Your Potential with English 4U!</div>
+      <section className="w-screen mt-24 xl:w-[1335px]">
+        <div className="flex flex-col items-center xl:h-[600px] lg:flex-row">
+          <div className="order-2 lg:w-1/2 lg:order-1">
+            <div className="flex flex-col ">
+              <div className="flex justify-center w-full lg:h-60 lg:w-92 mt-4">
+                <div className="text-4xl lg:line-clamp-3 lg:text-6xl"><div>English <span className="text-[#F6281B]">4</span><span className="text-[#004AAD]">U!</span> </div><div>Come and Unlock</div> <div>Your Potential!</div> </div>
               </div>
-              <div className="w-72">
-                <p>
+              <div className="flex justify-center items-center w-full lg:w-72">
+                <p className="w-[350px] mt-4">
                   Prepare-se para expandir seus horizontes e alcançar novas alturas com o English 4U!
                 </p>
               </div>
-              <div className="flex mt-8">
-                <button className="bg-green-400 text-white hover:bg-green-500 font-bold py-2 px-4 rounded mr-4">
-                  Se inscrever
-                </button>
-                <button className="border border-green-400 text-green-400 hover:text-green-500 font-bold py-2 px-4 rounded">
-                  Saber mais
-                </button>
+              <div className="flex mt-8 ">
+                <Button 
+                name="COMECE AGORA" 
+                className="w-full bg-[#F6281B] hover:bg-[#004AAD] text-white lg:hover:bg-[#004AAD] font-bold py-2 px-4 rounded mr-4 bg-[#F6281B] text-white text-xl w-3/4 h-20 rounded-full lg:w-3/4 lg:h-20 lg:rounded-full lg:mr-4 lg:bg-[#F6281B]" 
+                />
               </div>
             </div>
           </div>
-          <div className="bg-green-400 w-[500px] h-[500px] rounded-full">
-            <Image
-              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-              src="/estudante2.svg"
-              alt="English 4u"
-              width={400}
-              height={37}
-              priority
-            />
-          </div>
-        </div>
-      </section>
-      <section className="w-full h-[700px] mt-32">
-        <div className=" relative flex bg-purple-900 h-3/5 ">
-          <div className="absolute flex flex-col justify-center items-center left-1/4 mt-24 mr-72">
-            <div className="text-5xl text-white ">Só quem é <span className="text-green-400">Wise Up Online</span></div>
-            <div className="text-5xl ml-4 text-white">estuda assim:</div>
-            <span className="mt-4 text-lg text-white">O Wise Up Online é 100% digital com um método inovador. Estude onde quiser com conteúdos exclusivos.</span>
-          </div>
-          <div className="absolute -bottom-40 left-1/3 flex z-10 left-[370px]">
-            <div className="mr-4 flex items-start flex-col  bg-purple-700 space-y-4 h-[220px] w-[130px] border-mypurple-2 p-10 rounded-lg">
-              <div className="rounded-full w-16 h-16 bg-green-400"></div>
-              <span className="text-white">Multiplataforma</span>
-              <div className="flex">
-                <div className="h-2 w-8 rounded-lg bg-green-400"></div>
-                <div className="h-2 w-4 rounded-lg ml-2 bg-green-400"></div>
-              </div>
-              <span className="text-white">Acesse a plataforma em qualquer dispositivo;</span>
-            </div>
-            <div className="mr-4 flex items-start flex-col  bg-purple-700 space-y-4 h-[220px] w-[130px] border-mypurple-2 p-10 rounded-lg">
-              <div className="rounded-full w-16 h-16 bg-green-400"></div>
-              <span className="text-white">Multiplataforma</span>
-              <div className="flex">
-                <div className="h-2 w-8 rounded-lg bg-green-400"></div>
-                <div className="h-2 w-4 rounded-lg ml-2 bg-green-400"></div>
-              </div>
-              <span className="text-white">Acesse a plataforma em qualquer dispositivo;</span>
-            </div>
-            <div className="flex items-start flex-col  bg-purple-700 space-y-4 h-[220px] w-[130px] border-mypurple-2 p-10 rounded-lg">
-              <div className="rounded-full w-16 h-16 bg-green-400"></div>
-              <span className="text-white">Multiplataforma</span>
-              <div className="flex">
-                <div className="h-2 w-8 rounded-lg bg-green-400"></div>
-                <div className="h-2 w-4 rounded-lg ml-2 bg-green-400"></div>
-              </div>
-              <span className="text-white">Acesse a plataforma em qualquer dispositivo;</span>
+          <div className="flex justify-center w-full order-1 lg:order-2 lg:h-3/4">
+            <div className="flex justify-center items-center bg-[#004AAD] rounded-full w-[400px] h-[400px] lg:w-[550px] lg:h-[550px] lg:rounded-full ">
+              <img src="/mundo.svg" className="h-full rounded-full "/>
             </div>
           </div>
         </div>
-        <div className="h-2/5"></div>
       </section>
-      <section className="mb-20 w-full">
-        <div className="flex items-center ">
-          <div className="ml-40 w-1/2 rounded-lg">
-            <Image src="/metodologia.svg" alt="metodologia" width={500} height={70} priority className="rounded-md" />
+      <section className="w-screen mt-32 lg:w-screen lg:mt-32 ">
+        <div className=" flex flex-col w-screen bg-[#004AAD] ">
+          <div className="flex flex-col items-center  pt-8">
+            <div className="text-2xl text-white lg:text-5xl ">Só quem é <span className="text-[#F6281B]">English 4U Online</span></div>
+            <div className="text-2xl text-white lg:text-5xl lg:ml-4 ">estuda assim:</div>
+            <span className="w-5/6 mt-4 text-center text-white text-xl lg:text-center lg:mt-4 lg:text-lg">
+              O English 4U é 100% digital
+              com um método inovador. 
+              Estude onde quiser com conteúdos exclusivos.</span>
           </div>
-          <div className=" w-1/3 flex flex-col justify-center items-start">
+          <div className="h-[200px] relative">
+            <div className="flex flex-wrap justify-center items-center mt-8 absolute top-92 sm:static">
+              <div className="p-4 lg:p-10 bg-[#F6281B] mr-4 lg:mr-4 rounded-lg lg:flex lg:items-start lg:flex-col space-y-8 lg:space-y-4 h-[330px] w-[200px]">
+                  <div className="rounded-full border-2 border-[#004AAD] w-14 lg:w-16 h-14 lg:h-16 flex items-center justify-center"><img src="/multe.svg" alt="multe"/></div>
+                  <div>
+                    <span className="text-white text-sm lg:text-base ">Multiplataforma</span>
+                  </div>
+                  <div className="flex ">
+                      <div className="h-2 lg:h-4 w-6 lg:w-8 rounded-lg bg-[#004AAD]"></div>
+                      <div className="h-2 lg:h-4 w-3 lg:w-4 rounded-lg ml-2 lg:ml-1 bg-[#004AAD]"></div>
+                  </div>
+                  <div className="w-36">
+                    <span className="text-white text-sm lg:text-sm pt-4 lg:pt-8">Acesse a plataforma em qualquer dispositivo;</span>
+                  </div>
+              </div>
+              <div className="p-5 md:p-10 bg-[#F6281B] rounded-lg lg:mr-4 lg:flex lg:items-start lg:flex-col space-y-8 lg:space-y-4 h-[330px] w-[200px] md:mr-4">
+                  <div className="rounded-full border-2 border-[#004AAD] w-14 lg:w-16 h-14 lg:h-16 flex items-center justify-center"><img src="/maoss.svg" alt="multe"/></div>
+                  <div>
+                    <span className="text-white text-sm lg:text-base">Documentários</span>
+                  </div>
+                  <div className="flex">
+                      <div className="h-2 lg:h-4 w-6 lg:w-8 rounded-lg bg-[#004AAD]"></div>
+                      <div className="h-2 lg:h-4 w-3 lg:w-4 rounded-lg ml-2 lg:ml-1 bg-[#004AAD]"></div>
+                  </div>
+                  <div className="w-36">
+                    <span className="text-white text-sm lg:text-sm">Assista a documentários originais produzidos nos E.U.A.;</span>
+                  </div>
+              </div>
+              <div className="p-5 sm:p-10 mt-4 sm:mt-0 bg-[#F6281B] rounded-lg lg:mr-4 lg:flex lg:items-start lg:flex-col space-y-8 lg:space-y-4 h-[330px] w-[200px]">
+                  <div className="rounded-full border-2 border-[#004AAD] w-14 lg:w-16 h-14 lg:h-16 flex items-center justify-center"><img src="/conteudo.svg" alt="multe"/></div>
+                  <div>
+                    <span className="text-white text-sm lg:text-base">500h de conteúdos</span>
+                  </div>
+                  <div className="flex">
+                      <div className="h-2 lg:h-4 w-6 lg:w-8 rounded-lg bg-[#004AAD]"></div>
+                      <div className="h-2 lg:h-4 w-3 lg:w-4 rounded-lg ml-2 lg:ml-1 bg-[#004AAD]"></div>
+                  </div>
+                  <div className="w-36">
+                    <span className="text-white text-sm lg:text-sm">Vídeos de gramática e vocabulário e + de 5 mil exercícios;</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="h-[600px] lg:h-[300px]"></div>
+      </section>
+
+      
+     <section className="w-screen mt-92 lg:mb-20 lg:mt-0">
+        <div className="flex flex-col  items-center justify-center lg:flex-row lg:items-start ">
+          <div className="flex justify-center order-2 w-5/6  rounded-lg lg:w-1/2 lg:order-1 lg:basis-1/3 ">
+            <Image src="/metodologia.svg" alt="metodologia" width={400} height={70} priority className="rounded-md" />
+          </div>
+          <div className="flex flex-col justify-center items-center w-5/6 text-center order-1 lg:order-2 lg:basis:1/2 lg:w-2/6 l ">
             <div className="text-5xl mb-8">Metodologia</div>
-            <p className="mb-8">O Wise Up Online é completamente digital,
+            <p className="mb-8">O English 4U Online é completamente digital,
               onde você aprende o inglês aplicado na prática
               em situações reais de acordo com o tema do seu interesse.
               Tudo para oferecer a você uma experiência de imersão cultural instigante,
               te ajudando a pensar em inglês e tornando seu aprendizado muito mais fácil.
             </p>
-            <button className="bg-green-400 text-white hover:bg-green-500 font-bold py-2 px-4 rounded mr-4">
-              QUERO COMEÇAR
-            </button>
+            <div className="flex justify-center items-center w-3/4 order-3 hidden lg:block">
+             <Button 
+                name="COMECE AGORA" 
+                className="w-5/6 mt-4 bg-[#F6281B] hover:bg-[#004AAD] text-white lg:hover:bg-[#004AAD] font-bold py-2 px-4 rounded mr-4 bg-[#F6281B] text-white text-xl w-3/4 h-20 rounded-full lg:w-3/4 lg:h-20 lg:rounded-full lg:mr-4 lg:bg-[#F6281B]" 
+                />
+          </div>  
           </div>
-        </div>
-        <div className="flex w-full mt-28 bg-purple-900 ">
-          <div className="flex-1 flex justify-end items-center">
-            <div className="text-white text-6xl">Como estudar com <span className="text-green-400">o Wise Up Online?</span></div>
+          <div className="flex justify-center items-center w-3/4 order-3 lg:hidden">
+             <Button 
+                name="COMECE AGORA" 
+                className="w-5/6 mt-4 bg-[#F6281B] hover:bg-[#004AAD] text-white lg:hover:bg-[#004AAD] font-bold py-2 px-4 rounded mr-4 bg-[#F6281B] text-white text-xl w-3/4 h-20 rounded-full lg:w-3/4 lg:h-20 lg:rounded-full lg:mr-4 lg:bg-[#F6281B]" 
+                />
+          </div>  
+        </div> 
+
+        
+        <div className="flex flex-col w-full lg:flex-row mt-28 bg-[#004AAD] ">
+          <div className="flex items-center justify-center w-full  text-4xl lg:basis-1/3 lg:flex lg:justify-end lg:items-center">
+            <div className="text-4xl ml-8 text-white lg:text-6xl lg:ml-8 ">Como estudar com <span className="text-[#F6281B]">o English 4U Online?</span></div>
           </div>
-          <div className="flex relative items-center">
-            <Image src="" alt="" width={500} height={70} unoptimized priority />
+          <div className="flex justify-center lg:flex lg:relative lg:items-center">
+            <Image src="/celular.gif" alt="celular" width={500} height={70} unoptimized priority />
           </div>
-          <div className="flex w-92 flex-1 flex-col items-start justify-center text-white text-md">
-            <p>O Wise Up Online é bem simples e intuitivo. Em três passos, você desenvolve seu inglês:</p> <br />
-            <p><span className="text-green-400 text-2xl">Aprenda </span>com documentários originais que apresentam o inglês aplicado na prática.</p><br />
-            <p><span className="text-green-400 text-2xl">Explore</span> com os vídeos de vocabulário, gramática e guides de palavras com listening.</p><br />
-            <p><span className="text-green-400 text-2xl">Pratique</span> com mais de 4 mil exercícios de fixação.</p><br />
+          <div className="w-full flex flex-col items-center lg:flex lg:w-92 lg:flex-1 lg:flex-col lg:items-start lg:justify-center text-white text-md ">
+            <p className="w-[350px]">O English 4U Online é bem simples e intuitivo. Em três passos, você desenvolve seu inglês:</p> <br />
+            <p className="w-[350px]"><span className="text-[#F6281B] text-2xl">Aprenda </span>com documentários originais que apresentam o inglês aplicado na prática.</p><br />
+            <p className="w-[350px]"><span className="text-[#F6281B] text-2xl">Explore</span> com os vídeos de vocabulário, gramática e guides de palavras com listening.</p><br />
+            <p className="w-[350px]"><span className="text-[#F6281B] text-2xl">Pratique</span> com mais de 4 mil exercícios de fixação.</p><br />
+            <Button 
+                name="ASSINE JA" 
+                className="w-5/6 mt-4 mb-4 bg-[#F6281B] hover:bg-[#004AAD] text-white lg:hover:bg-[#004AAD] font-bold py-2 px-4 rounded mr-4 bg-[#F6281B] text-white text-xl w-3/4 h-20 rounded-full lg:w-3/4 lg:h-20 lg:rounded-full lg:mr-4 lg:bg-[#F6281B]" 
+            />
           </div>
-        </div>
+        </div>  
       </section>
-      <footer className="pt-32 mt-48">
+      <section className="w-screen flex flex-col items-center bg-white">
+        <div className="mt-4 ">
+              <span className="text-5xl lg:text-5xl text-[#004AAD]">Depoimentos</span>
+          </div>
+        <TestimonialCarousel testimonials={testimonials}/>
+      </section>
+      
+   {/* <footer className="pt-32 mt-48">
         <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-          <a
-            href=""
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={`mb-3 text-2xl font-semibold`}>
-              Sobre{" "}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-              Saiba mais sobre nós e sobre o produto!
-            </p>
-          </a>
 
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={`mb-3 text-2xl font-semibold`}>
-              Contato{" "}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-              Aprenda com nosso curso interativo em&nbsp;English 4u!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={`mb-3 text-2xl font-semibold`}>
-              Formulario{" "}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-              Entre no nosso formulário e garanta já a sua vaga.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={`mb-3 text-2xl font-semibold`}>
-              Saiba mais{" "}
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                -&gt;
-              </span>
-            </h2>
-            <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-              Tem alguma dúvida e gostaria de entrar em contato?
-            </p>
-          </a>
         </div>
-      </footer> */}
+    </footer>   */}
     </main>
   );
 }
+
+
+
