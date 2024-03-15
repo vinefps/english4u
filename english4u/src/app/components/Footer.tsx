@@ -1,75 +1,47 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons';
+
 export default function Footer() {
     return (
-        <footer className="pt-32 mt-48">
-            <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-                <a
-                    href=""
-                    className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                        Sobre{" "}
-                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                            -&gt;
-                        </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                        Saiba mais sobre nós e sobre o produto!
-                    </p>
-                </a>
+        <footer className="w-screen bg-[#004AAD] text-gray-300 lg:py-12 ">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 gap-6 lg:grid-cols-4">
+                <div className="footer-section">
+                    <h2 className="text-lg font-semibold mb-2">Sobre</h2>
+                    <p>Saiba mais sobre nós e sobre o produto!</p>
+                </div>
+                <div className="footer-section">
+                    <h2 className="text-lg font-semibold mb-2">Contato</h2>
+                    <p>Aprenda com nosso curso interativo em English 4u!</p>
+                </div>
 
-                <a
-                    href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-                    className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                        Contato{" "}
-                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                            -&gt;
-                        </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                        Aprenda com nosso curso interativo em&nbsp;English 4u!
-                    </p>
-                </a>
-
-                <a
-                    href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                    className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                        Formulario{" "}
-                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                            -&gt;
-                        </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                        Entre no nosso formulário e garanta já a sua vaga.
-                    </p>
-                </a>
-
-                <a
-                    href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                    className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                        Saiba mais{" "}
-                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                            -&gt;
-                        </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-                        Tem alguma dúvida e gostaria de entrar em contato?
-                    </p>
-                </a>
+                <div className="footer-section">
+                    <h2 className="text-lg font-semibold mb-2">Links Úteis</h2>
+                    <ul>
+                        <li><a href="#" className="hover:text-gray-400 transition-colors">Política de Privacidade</a></li>
+                        <li><a href="#" className="hover:text-gray-400 transition-colors">Termos de Serviço</a></li>
+                    </ul>
+                </div>
+                <div className="footer-section flex justify-center lg:justify-start">
+                    <h2 className="text-lg font-semibold mb-2">Redes Sociais</h2>
+                    <div className="flex space-x-4 ml-4">
+                        <a href="#" className="hover:text-gray-400 transition-colors">
+                            <FontAwesomeIcon icon={faFacebook} className="w-8 h-8" />
+                        </a>
+                        <a href="#" className="hover:text-gray-400 transition-colors">
+                            <FontAwesomeIcon icon={faInstagram} className="w-8 h-8" />
+                        </a>
+                        <a href="#" className="hover:text-gray-400 transition-colors">
+                            <FontAwesomeIcon icon={faYoutube} className="w-8 h-8" />
+                        </a>
+                        <a href="#" className="hover:text-gray-400 transition-colors">
+                            <FontAwesomeIcon icon={faTiktok} className="w-8 h-8" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div className="container mx-auto mt-8 text-center">
+                <p className="text-sm opacity-50">&copy; 2024 Nome da Empresa. Todos os direitos reservados.</p>
             </div>
         </footer>
-    )
+    );
 }

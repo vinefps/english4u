@@ -53,7 +53,7 @@ export default function Menu() {
                         <li className='p-8  lg:p-0'>
                             <a href="#" className="text-white text-xl hover:text-gray-100 px-3 py-2 rounded-md text-lg lg:text-base">FAQ</a>
                         </li>
-                        <li className='p-8 lg:p-2'>
+                        <li className='p-8 lg:p-2 flex justify-center items-center'>
                             <ButtonDefault name='ACESSAR' className='bg-[#F6281B] hover:bg-[#004AAD] text-white text-xl w-3/4 h-20 rounded-full lg:w-28 lg:h-12 lg:bg-[#F6281B]' />
                         </li>
                         <div className='w-full h-2 bg-[#004AAD] lg:hidden'></div>
