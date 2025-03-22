@@ -396,10 +396,7 @@ export default function Home() {
                 <Button
                   name="COMECE AGORA"
                   className="relative overflow-hidden bg-gradient-to-r from-[#004AAD] to-[#0066FF] text-white font-bold py-5 px-10 rounded-full text-lg shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-xl group"
-                >
-                  <span className="absolute right-0 w-8 h-8 rounded-full bg-white/20 group-hover:scale-[20] transition-all duration-1000 origin-center"></span>
-                  <span className="relative z-10">COMECE AGORA</span>
-                </Button>
+                />
               </div>
             </div>
           </div>
@@ -500,11 +497,8 @@ export default function Home() {
                 <div className="mt-8">
                   <Button
                     name="ASSINE JÁ"
-                    className="w-full bg-[#F6281B] hover:bg-[#E01B0E] text-white font-bold py-5 px-8 rounded-xl text-lg shadow-xl transition-all duration-300 relative overflow-hidden group"
-                  >
-                    <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#FF5640]/40 to-transparent bg-[length:200%_100%] bg-right group-hover:bg-left transition-all duration-1000"></span>
-                    <span className="relative z-10">ASSINE JÁ</span>
-                  </Button>
+                    className="w-full bg-[#F6281B] hover:bg-[#E01B0E] text-white font-bold py-5 px-8 rounded-xl text-lg shadow-xl transition-all duration-300"
+                  />
                 </div>
               </div>
             </div>
